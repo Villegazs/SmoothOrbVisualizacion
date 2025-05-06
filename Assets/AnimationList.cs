@@ -20,11 +20,20 @@ public class AnimationList : MonoBehaviour
     {
 
     }
+    public void Reset()
+    {
+        myCanvas = GetComponent<Canvas>();
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
 
+        Debug.Log("Ancho del Canvas: " + canvasWidth);
+    }
     public void Start()
     {
+
         // Obtener el componente RectTransform del Canvas
         RectTransform canvasRect = myCanvas.GetComponent<RectTransform>();
+
 
         // Obtener el ancho del Canvas
         canvasWidth = canvasRect.rect.width;
@@ -33,8 +42,9 @@ public class AnimationList : MonoBehaviour
     }
 
 
-    public void PanelFadeIn()
+    public void PanelFadeIn(float fadeTime)
     {
+        gameObject.SetActive(true);
         canvasGroup.alpha = 0f;
         rectTransform.transform.localPosition = new Vector3(-canvasWidth, 0f, 0f);
         rectTransform.DOAnchorPos(new Vector2(0f, 0f), fadeTime, false).SetEase(Ease.OutElastic).SetUpdate(true);
@@ -43,17 +53,19 @@ public class AnimationList : MonoBehaviour
         StartCoroutine("ItemsAnimation");
     }
 
-    public void PanelFadeOut()
+    public void PanelFadeOut(float fadeTime)
     {
-        StartCoroutine(PanelFadeOutRoutine());
+        StartCoroutine(PanelFadeOutRoutine(fadeTime));
     }
-    IEnumerator PanelFadeOutRoutine()
+    public IEnumerator PanelFadeOutRoutine(float fadeTime)
     {
         yield return StartCoroutine(ItemsDissapear());
         canvasGroup.alpha = 1f;
         rectTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         rectTransform.DOAnchorPos(new Vector2(canvasWidth, 0f), fadeTime, false).SetEase(Ease.InOutQuint);
         canvasGroup.DOFade(0, fadeTime);
+        yield return new WaitForSeconds(fadeTime);
+        gameObject.SetActive(false);
 
     }
 

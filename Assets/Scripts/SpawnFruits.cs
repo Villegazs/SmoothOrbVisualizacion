@@ -4,6 +4,10 @@ public class SpawnFruits : MonoBehaviour
 {
     public GameObject[] fruitPrefabs;
     public Transform spawnPoint;
+    public Animator smoothOrbAnimator;
+    public GameObject smoothieObject;
+
+    [HideInInspector] public bool alreadyOpen = false;
 
     private void Start()
     {
@@ -17,6 +21,13 @@ public class SpawnFruits : MonoBehaviour
     {
         if (fruitIndex >= 0 && fruitIndex < fruitPrefabs.Length)
         {
+            if (!alreadyOpen)
+            {
+                alreadyOpen = true;
+                smoothieObject.SetActive(false);
+                smoothOrbAnimator.SetTrigger("Open");
+            }
+
             Instantiate(fruitPrefabs[fruitIndex], spawnPoint.position, spawnPoint.rotation);
         }
         else

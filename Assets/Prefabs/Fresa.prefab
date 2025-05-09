@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1779376706253959885, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2170018965810200394, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -55,6 +59,14 @@ PrefabInstance:
     - target: {fileID: 5172682475924660997, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
       propertyPath: m_Name
       value: Fresa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172682475924660997, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534002041445111625, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
+      propertyPath: m_VersionIndex
+      value: 734
       objectReference: {fileID: 0}
     - target: {fileID: 6306292970532925179, guid: 0242edc555732a94b906490c3adccf7c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

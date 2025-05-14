@@ -6,6 +6,9 @@ public class DetectMouse : MonoBehaviour
     private Outline[] childOutlines;
     private Camera mainCamera;
     
+    [Header("Orbe Information")]
+    [SerializeField] private OrbeInfo orbeInfo; // Asigna el ScriptableObject aquí
+
     [Header("Examination Object")]
     [SerializeField] private GameObject examineObjectCopy; // Copy of the object that will be shown when zoomed
     
@@ -22,6 +25,8 @@ public class DetectMouse : MonoBehaviour
     // Store the original position and rotation of the copy
     private Vector3 copyOriginalPosition;
     private Quaternion copyOriginalRotation;
+
+    public OrbeInfo OrbeInfo { get { return orbeInfo; } }
     
     void Start()
     {
@@ -131,7 +136,7 @@ public class DetectMouse : MonoBehaviour
         Debug.Log("Started examination mode with smooth transition");
     }
     
-    private void EndExamination()
+    public void EndExamination()
     {
         if (examineObjectCopy == null) return;
         
@@ -221,6 +226,13 @@ public class DetectMouse : MonoBehaviour
         if (!isExamining)
         {
             StartExamination();
+            SwitchPanels("PartsOfOrbMenu|InfoPartOrbMenu");
+            
         }
+    }
+    private void SwitchPanels(string panelName)
+    {
+            UIManager.Instance.SwitchPanels(panelName);
+            UIManager.Instance.ShowOrbeInfo(orbeInfo,this);
     }
 }

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
     [SerializeField] private float fadeTime = 1.0f;
     [SerializeField] private AnimationList[] uiPanels; // Todos los paneles que quieres controlar
     [SerializeField] private string mainMenuPannel;
+    [SerializeField] private OrbeDisplay orbeDisplay;
 
     private Dictionary<string, AnimationList> panelDictionary = new Dictionary<string, AnimationList>();
 
@@ -19,6 +22,11 @@ public class UIManager : MonoBehaviour
             panel.gameObject.SetActive(false); // Asegurarse que todos están desactivados al inicio
         }
         ShowPanel(mainMenuPannel);
+        
+        if(Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     // Función pública para mostrar un panel con fade in
@@ -88,5 +96,11 @@ public class UIManager : MonoBehaviour
         {
             showPanel.PanelFadeIn(fadeTime);
         }
+    }
+
+    // Nuevo método para mostrar información de orbe
+    public void ShowOrbeInfo(OrbeInfo info, DetectMouse actualPart)
+    {
+        orbeDisplay.ShowOrbeInfo(info, actualPart);
     }
 }

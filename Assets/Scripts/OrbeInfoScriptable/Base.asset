@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Base
   descripcionList:
-  - 
+  - "La base del orbe utiliza electroimanes y bobinas en arreglo Halbach para inducir
+    rotaci\xF3n mediante campos electromagn\xE9ticos. "
+  - "La esfera, con una capa ferromagn\xE9tica, rota libremente sin salirse de eje
+    y recibe energ\xEDa para operar."

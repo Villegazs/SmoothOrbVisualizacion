@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: "N\xFAcleo Criog\xE9nico"
   descripcionList:
-  - "Encargado de mantener el fr\xEDo del batido, levitando en el centro del orbe,
-    conservando en todo momento contacto con la bebida.\L\nEsta hecho de LK-100,
-    un material superconductor capaz de funcionar a temperatura ambiente."
-  - "En su interior circula un fluido termoportador, compuesto por nanoestructuras
-    no t\xF3xicas de part\xEDculas magnetot\xE9rmicas que responden a campos para
-    enfriamiento localizado. \nCon ayuda de la energ\xEDa almacenada en sus nano-capacitores
-    incrustados, genera un efecto Peltier inverso para la extracci\xF3n de calor."
+  - "Dispositivo esf\xE9rico de LK-100 que mantiene fr\xEDo el batido mediante levitaci\xF3n
+    magn\xE9tica y contacto constante. "
+  - "Contiene un fluido con nanoestructuras magnetot\xE9rmicas que, generan un efecto
+    Peltier inverso para extraer calor eficientemente. "

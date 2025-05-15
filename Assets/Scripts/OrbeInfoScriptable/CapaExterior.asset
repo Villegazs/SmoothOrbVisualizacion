@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Capa Exterior
   descripcionList:
-  - 
+  - " Fabricada con una aleaci\xF3n aeroespacial ultrarresistente. "
+  - 'Esta capa protege los componentes internos del SmoothOrb contra impactos y temperaturas
+    extremas. '
+  - "Su acabado orbital pulido no solo aporta una est\xE9tica sino que tambi\xE9n
+    mejora la disipaci\xF3n t\xE9rmica y la aerodin\xE1mica durante la rotaci\xF3n."

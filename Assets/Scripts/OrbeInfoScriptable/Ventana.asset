@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Ventana
   descripcionList:
-  - 
+  - 'Permite ver el interior del orbe y disfrutar de la vista del rico batido. '
+  - Al mismo tiempo funciona como compuerta para introducir los ingredientes del
+    smoothie.

@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Mix Room
   descripcionList:
-  - 
+  - "Aerogel de grafeno dopado con s\xEDlice: Es un material ultra ligero, con baja
+    conductividad t\xE9rmica. "
+  - "Que act\xFAa como una \"esponja t\xE9rmica\", capturando y disipando el calor
+    internamente sin transmitirlo."

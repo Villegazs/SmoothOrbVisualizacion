@@ -7,7 +7,8 @@ public class DetectMouse : MonoBehaviour
     private Camera mainCamera;
     
     [Header("Orbe Information")]
-    [SerializeField] private OrbeInfo orbeInfo; // Asigna el ScriptableObject aquí
+    [SerializeField] private OrbeInfo orbeInfo; // Asigna el ScriptableObject aquï¿½
+    [SerializeField] private GameObject blackener;
 
     [Header("Examination Object")]
     [SerializeField] private GameObject examineObjectCopy; // Copy of the object that will be shown when zoomed
@@ -149,6 +150,7 @@ public class DetectMouse : MonoBehaviour
                                           copyOriginalRotation, // Use saved original rotation
                                           examineTransitionSpeed));
         
+        blackener.SetActive(false);
         Debug.Log("Ending examination mode with smooth transition");
     }
     
@@ -232,6 +234,7 @@ public class DetectMouse : MonoBehaviour
     }
     private void SwitchPanels(string panelName)
     {
+            blackener.SetActive(true);
             UIManager.Instance.SwitchPanels(panelName);
             UIManager.Instance.ShowOrbeInfo(orbeInfo,this);
     }

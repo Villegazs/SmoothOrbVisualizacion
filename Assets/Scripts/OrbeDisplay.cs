@@ -9,6 +9,7 @@ public class OrbeDisplay : MonoBehaviour
     private DetectMouse actualOrbPart;
     OrbeInfo currentOrbeInfo;
     private int currentDescIndex;
+    private DescriptionNavigation descNavigation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void ShowOrbeInfo(OrbeInfo info, DetectMouse actualPart)
@@ -18,6 +19,7 @@ public class OrbeDisplay : MonoBehaviour
         titleText.text = currentOrbeInfo.nombre;
         descText.text = currentOrbeInfo.descripcionList[currentDescIndex];
         actualOrbPart = actualPart;
+        InitializeImageButtons();
     }
 
     public void HideOrbeInfo()
@@ -47,11 +49,16 @@ public class OrbeDisplay : MonoBehaviour
             descText.text = currentOrbeInfo.descripcionList[currentDescIndex];
         }
 
-        UpdateNavigationButtons();
+        UpdateNavigationButtons(currentDescIndex);
     }
 
-    private void UpdateNavigationButtons()
+    private void UpdateNavigationButtons(int index)
     {
-
+        descNavigation.OnNavigationButtonClicked(index);
+    }
+    private void InitializeImageButtons()
+    {
+        descNavigation = GetComponent<DescriptionNavigation>();
+        descNavigation.InitializeNavigation(currentOrbeInfo.descripcionList.Count);
     }
 }

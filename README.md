@@ -6,6 +6,11 @@
 
 An interactive 3D Unity application for exploring the internal components of a "Smooth Orb" (smoothie device), featuring fruit interactions and nutritional data visualization through interactive diagrams.
 
+
+https://github.com/user-attachments/assets/7a9a16a6-caa6-41b2-b59b-cb1fc9160701
+
+
+
 ## ✨ Features
 
 - **Interactive 3D Visualization** with rotation and zoom capabilities

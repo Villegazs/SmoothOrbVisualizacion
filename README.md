@@ -21,7 +21,6 @@ An interactive 3D Unity application for exploring the internal components of a "
 - **Unity 2023.x** with Universal Render Pipeline (URP) 17.0.3
 - **C# 9.0**
 - **Input System 1.11.2** | **Cinemachine 3.1.3** | **TextMesh Pro**
-- **Third-party**: QuickOutline, Book-Page Curl, Post Processing 3.4.0, ProBuilder 6.0.5
 
 ## 🚀 Quick Start
 

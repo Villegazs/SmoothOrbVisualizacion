@@ -71,14 +71,6 @@ Assets/
 
 8 interactive layers modeled as ScriptableObjects: Outer Layer, Grooved Metal, Cryogenic Core, Blades, Window, Mix Room, Foam System, and Base.
 
-## 📦 Requirements
-
-- **Unity**: 2023.1+
-- **IDE**: Visual Studio 2022 / Rider / VS Code
-- **System**: Windows 10 64-bit / macOS 10.14+ / Ubuntu 20.04+
-- **RAM**: 8 GB | **GPU**: DirectX 11 / Metal / Vulkan compatible
-
----
 
 **Note**: Academic project developed for Semester 7 as an educational visualization tool for smoothie device mechanics.
 
